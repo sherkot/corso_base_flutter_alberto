@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class ProductDetailPage extends StatelessWidget {
   static String routeName = "/detail";
+
   const ProductDetailPage({Key? key}) : super(key: key);
 
   @override
@@ -11,6 +12,10 @@ class ProductDetailPage extends StatelessWidget {
         ModalRoute.of(context)!.settings.arguments as String?;
 
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
